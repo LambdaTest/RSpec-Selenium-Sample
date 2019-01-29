@@ -1,0 +1,25 @@
+server: "hub.lambdatest.com"
+user: "LT_USERNAME"
+key: "LT_ACCESS_KEY"
+
+common_caps:
+  "build": "RSpec Selenium Demo"
+  "visual": true
+
+browser_caps:
+  -
+    "browserName": "chrome"
+    "version": "71"
+    "platform": "windows 10"
+  -
+    "browserName": "firefox"
+    "version": "61"
+    "platform": "windows 7"
+  -
+    "browserName": "internet explorer"
+    "version": "11"
+    "platform": "windows 10"
+  -
+    "browserName": "safari"
+    "version": "11"
+    "platform": "macOS High Sierra"
