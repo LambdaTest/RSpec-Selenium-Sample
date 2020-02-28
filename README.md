@@ -1,4 +1,4 @@
-# Rspec-Selenium-Sample
+# Rspec Selenium Sample
 [Rspec](http://rspec.info/) Integration with LambdaTest.
 
 ![LambdaTest Logo](https://www.lambdatest.com/static/images/logo.svg)
