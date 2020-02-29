@@ -7,7 +7,7 @@ GEM
     ffi (1.10.0)
     ffi (1.10.0-x64-mingw32)
     parallel (1.13.0)
-    rake (12.3.2)
+    rake (12.3.3)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
