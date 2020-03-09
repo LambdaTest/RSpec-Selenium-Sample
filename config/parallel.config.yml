@@ -4,9 +4,9 @@ key: "LT_ACCESS_KEY"
 
 common_caps:
   "build": "RSpec Selenium Demo"
-  "visual": true
-  "network": true
-  "console": true
+  "visual": false
+  "network": false
+  "console": false
 
 browser_caps:
   -
