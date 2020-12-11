@@ -4,12 +4,9 @@ key: "LT_ACCESS_KEY"
 
 common_caps:
   "build": "RSpec Selenium Demo"
-  "visual": false
-  "network": false
-  "console": false
 
 browser_caps:
   -
     "browserName": "chrome"
-    "version": "71"
-    "platform": "win10"
+    "version": "latest"
+    "platform": "Windows 10"
