@@ -28,7 +28,7 @@ export LT_ACCESS_KEY="YOUR ACCESS KEY"
 set LT_USERNAME="YOUR_USERNAME"
 set LT_ACCESS_KEY="YOUR ACCESS KEY"
 ```
-Step 3. Install dependencies using gem.
+Step 3. Install dependencies.
 ```
 bundle install 
 ```
