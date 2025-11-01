@@ -20,7 +20,7 @@ describe "Sample ToDo List Functions" do
      @driver.find_element(:id, 'addbutton').click
 
      # Verify Item added successfully
-     textAddedItem = @driver.find_element(:css, "[class='list-unstyled'] li:nth-child(6) span").text
-     expect(textAddedItem).to eq(itemName)
+     textAddedItem = @driver.find_element(:css, "li:nth-child(6) span").text
+     expect(textAddedItem.strip).to eq(itemName)
    end
 end

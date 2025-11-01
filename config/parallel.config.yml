@@ -18,10 +18,10 @@ browser_caps:
     "version": "latest"
     "platform": "windows 7"
   -
-    "browserName": "internet explorer"
+    "browserName": "edge"
     "version": "latest"
     "platform": "windows 10"
   -
     "browserName": "safari"
     "version": "latest"
-    "platform": "macOS High Sierra"
+    "platform": "macOS Sonoma"
