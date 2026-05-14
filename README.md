@@ -1,182 +1,119 @@
-# Run Selenium Tests With RSpec On LambdaTest
-
-![Group 7552](https://user-images.githubusercontent.com/95698164/174256293-77d3c07c-0455-4671-bc07-4657ec3b03c7.png)
+# Run Selenium Tests with RSpec on TestMu AI (Formerly LambdaTest)
 
 <p align="center">
-  <a href="https://www.lambdatest.com/blog/?utm_source=github&utm_medium=repo&utm_campaign=RSpec-Selenium-Sample" target="_bank">Blog</a>
-  &nbsp; &#8901; &nbsp;
-  <a href="https://www.lambdatest.com/support/docs/?utm_source=github&utm_medium=repo&utm_campaign=RSpec-Selenium-Sample" target="_bank">Docs</a>
-  &nbsp; &#8901; &nbsp;
-  <a href="https://www.lambdatest.com/learning-hub/?utm_source=github&utm_medium=repo&utm_campaign=RSpec-Selenium-Sample" target="_bank">Learning Hub</a>
-  &nbsp; &#8901; &nbsp;
-  <a href="https://www.lambdatest.com/newsletter/?utm_source=github&utm_medium=repo&utm_campaign=RSpec-Selenium-Sample" target="_bank">Newsletter</a>
-  &nbsp; &#8901; &nbsp;
-  <a href="https://www.lambdatest.com/certifications/?utm_source=github&utm_medium=repo&utm_campaign=RSpec-Selenium-Sample" target="_bank">Certifications</a>
-  &nbsp; &#8901; &nbsp;
-  <a href="https://www.youtube.com/c/LambdaTest" target="_bank">YouTube</a>
+  <a href="https://www.testmuai.com/"><img src="https://img.shields.io/badge/MADE%20BY%20TestMu%20AI-000000.svg?style=for-the-badge&labelColor=000" alt="Made by TestMu AI"></a>
+  <a href="https://rubygems.org/gems/rspec"><img src="https://img.shields.io/gem/v/rspec.svg?style=for-the-badge&labelColor=000000" alt="RSpec version"></a>
+  <a href="https://community.testmuai.com/"><img src="https://img.shields.io/badge/Join%20the%20community-blueviolet.svg?style=for-the-badge&labelColor=000000" alt="Community"></a>
 </p>
-&emsp;
-&emsp;
-&emsp;
 
-*Learn how to use RSpec framework to configure and run your Java automation testing scripts on the LambdaTest platform*
+## Getting Started
 
-[<img height="58" width="200" src="https://user-images.githubusercontent.com/70570645/171866795-52c11b49-0728-4229-b073-4b704209ddde.png">](https://accounts.lambdatest.com/register)
+[TestMu AI](https://www.testmuai.com/) (Formerly LambdaTest) is the world's first full-stack AI Agentic Quality Engineering platform that empowers teams to test intelligently, smarter, and ship faster. Built for scale, it offers a full-stack testing cloud with 10K+ real devices and 3,000+ browsers. With AI-native test management, MCP servers, and agent-based automation, TestMu AI supports Selenium, Appium, Playwright, and all major frameworks. 
 
-## Table of Contents
+With TestMu AI (Formerly LambdaTest), you can run Ruby RSpec Selenium automation tests across real browsers and operating systems. This sample shows how to configure Ruby + RSpec to run on the TestMu AI cloud.
 
-* [Pre-requisites](#pre-requisites)
-* [Run Your First Test](#run-your-first-test)
-* [Executing The Test](#executing-the-test)
-* [Running the Parallel Tests Using RSpec Framework](#running-the-parallel-tests-using-rspec-framework)
-* [Testing Locally Hosted or Privately Hosted Projects](#testing-locally-hosted-or-privately-hosted-projects)
+- [Sign up on TestMu AI](https://www.testmuai.com/register/) (Formerly LambdaTest).
+- Follow the [TestMu AI Documentation](https://www.testmuai.com/support/docs/) for the full setup walkthrough.
 
-## Pre-requisites
+### Prerequisites
 
-Before you can start performing Ruby automation testing with Selenium, you would need to:
+- Ruby (latest stable) and Bundler
+- A TestMu AI (Formerly LambdaTest) account with your username and access key
 
-* Install Ruby and gem on your local system. Follow these instructions to install on different operating systems.
-  * For **Windows**, you can download from the [official website](https://rubyinstaller.org/downloads/).
-  * For **Linux** or **Ubuntu**, you can run a simple apt command like below:
-  ```bash
-  sudo apt-get install ruby-full
-  ```
-  * For **macOS**, you can run a [Homebrew](https://brew.sh/) command like this:
-  ```bash
-  brew install ruby
-  ```
-* To run tests in parallel you will require the [parallel_tests](https://github.com/grosser/parallel_tests) gem.
-* LambdaTest binary file for running tests on your locally hosted web pages.
+### Setup
 
-### Installing Selenium Dependencies and Tutorial Repo
+Clone and install dependencies:
 
-Clone the LambdaTest’s [RSpec-Selenium repository](https://github.com/LambdaTest/RSpec-Selenium-Sample) and navigate to the code directory as shown below:
 ```bash
-git clone https://github.com/LambdaTest/RSpec-Selenium-Sample.git
-cd RSpec-Selenium-Sample
-```
-After navigating to the cloned directory, install project dependencies using the below commands:
-```bash
+git clone https://github.com/LambdaTest/RSpec-Selenium-Sample && cd RSpec-Selenium-Sample
 bundle install
 ```
-### Setting up Your Authentication
-Make sure you have your LambdaTest credentials with you to run test automation scripts with Jest on LambdaTest Selenium Grid. You can obtain these credentials from the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=RSpec-Selenium-Sample) or through LambdaTest Profile.
 
-Set LambdaTest Username and Access Key in environment variables.
- * For Linux/macOS:
- `export LT_USERNAME="YOUR_USERNAME" export LT_ACCESS_KEY="YOUR ACCESS KEY"`
- * For Windows:
- `set LT_USERNAME="YOUR_USERNAME" set LT_ACCESS_KEY="YOUR ACCESS KEY"`
+Set your credentials as environment variables.
 
-## Run Your First Test
+**macOS / Linux:**
 
-### Sample Test with RSpec Ruby
+```bash
+export LT_USERNAME="YOUR_USERNAME"
+export LT_ACCESS_KEY="YOUR_ACCESS_KEY"
+export LT_TUNNEL="YOUR_TUNNEL_NAME"
+```
 
-**Test Scenario:** The example mentioned in the [lambdatest.rb](https://github.com/LambdaTest/RSpec-Selenium-Sample/blob/master/scripts/lambdatest.rb) sample file would help you to execute your automation test using RSpec.
+**Windows:**
 
-> You can generate capabilities for your test requirements with the help of our inbuilt **[Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/?utm_source=github&utm_medium=repo&utm_campaign=RSpec-Selenium-Sample)**.
+```bash
+set LT_USERNAME="YOUR_USERNAME"
+set LT_ACCESS_KEY="YOUR_ACCESS_KEY"
+set LT_TUNNEL="YOUR_TUNNEL_NAME"
+```
 
-## Executing The Test
+### Run tests
 
-Navigate to the directory where you cloned the sample of RSpec Ruby and run the following command.
 ```bash
 bundle exec rake single
 ```
-Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on LambdaTest automation dashboard. [LambdaTest Automation Dashboard](https://automation.lambdatest.com/build/?utm_source=github&utm_medium=repo&utm_campaign=RSpec-Selenium-Sample) will help you view all your text logs, screenshots and video recording for your entire automation tests.
 
-## Running the Parallel Tests Using RSpec Framework
+For parallel execution across browsers:
 
-### Executing the Parallel Tests 
-Navigate to the directory where you cloned the sample of RSpec Ruby and run the following command.
 ```bash
 bundle exec rake parallel
 ```
-Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on [LambdaTest automation dashboard](https://automation.lambdatest.com/build/?utm_source=github&utm_medium=repo&utm_campaign=RSpec-Selenium-Sample).
 
-## Testing Locally Hosted or Privately Hosted Projects
+View results on your TestMu AI dashboard.
 
-You can test your locally hosted or privately hosted projects with [LambdaTest Selenium grid cloud](https://www.lambdatest.com/selenium-automation/?utm_source=github&utm_medium=repo&utm_campaign=RSpec-Selenium-Sample) using LambdaTest Tunnel app. All you would have to do is set up an SSH tunnel using LambdaTest Tunnel app and pass toggle `tunnel = True` via desired capabilities. LambdaTest Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are made live.
+### Local testing with TestMu AI Tunnel
 
->Refer our [LambdaTest Tunnel documentation](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/) for more information.
+To test locally hosted apps, set up the TestMu AI tunnel. OS-specific guides:
 
-Here’s how you can establish LambdaTest Tunnel.
+- [Local Testing on Windows](https://www.testmuai.com/support/docs/local-testing-for-windows/)
+- [Local Testing on macOS](https://www.testmuai.com/support/docs/local-testing-for-macos/)
+- [Local Testing on Linux](https://www.testmuai.com/support/docs/local-testing-for-linux/)
 
->Download the binary file of:
-* [LambdaTest Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
-* [LambdaTest Tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
-* [LambdaTest Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
+Add the following to your capabilities:
 
-Open command prompt and navigate to the binary folder.
-
-Run the following command:
-```bash
-LT -user {user’s login email} -key {user’s access key}
-```
-So if your user name is lambdatest@example.com and key is 123456, the command would be:
-```bash
-LT -user lambdatest@example.com -key 123456
-```
-Once you are able to connect **LambdaTest Tunnel** successfully, you would just have to pass on tunnel capabilities in the code shown below :
-
-**Tunnel Capability**
 ```ruby
-caps = {             
-            ...          
-            :tunnel => true,         
-            ...
-        }  
+:tunnel => true,
 ```
-Use the below command for running a local test.
-```bash
-bundle exec rake local
-```
-## Additional Links
 
-* [Advanced Configuration for Capabilities](https://www.lambdatest.com/support/docs/selenium-automation-capabilities/)
-* [How to test locally hosted apps](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/)
-* [How to integrate LambdaTest with CI/CD](https://www.lambdatest.com/support/docs/integrations-with-ci-cd-tools/)
+## Contributions
 
-## Documentation & Resources :books:
+Contributions are welcome. Open an issue to discuss your idea before submitting a pull request. When reporting bugs, include your Ruby version, OS, and RSpec version.
 
-      
-Visit the following links to learn more about LambdaTest's features, setup and tutorials around test automation, mobile app testing, responsive testing, and manual testing.
+## TestMu AI (Formerly LambdaTest) Community
 
-* [LambdaTest Documentation](https://www.lambdatest.com/support/docs/?utm_source=github&utm_medium=repo&utm_campaign=RSpec-Selenium-Sample)
-* [LambdaTest Blog](https://www.lambdatest.com/blog/?utm_source=github&utm_medium=repo&utm_campaign=RSpec-Selenium-Sample)
-* [LambdaTest Learning Hub](https://www.lambdatest.com/learning-hub/?utm_source=github&utm_medium=repo&utm_campaign=RSpec-Selenium-Sample)    
+Connect with testers and developers in the [TestMu AI Community](https://community.testmuai.com/). Ask questions, share what you are building, and discuss best practices in test automation and DevOps.
+  
+## TestMu AI (Formerly LambdaTest) Certifications
 
-## LambdaTest Community :busts_in_silhouette:
+Earn free [TestMu AI Certifications](https://www.testmuai.com/certifications/) for testers, developers, and QA engineers. Validate your skills in Selenium, Cypress, Playwright, Appium, Espresso and more. Industry-recognized, shareable on LinkedIn, and built by practitioners, not marketers.
 
-The [LambdaTest Community](https://community.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=RSpec-Selenium-Sample) allows people to interact with tech enthusiasts. Connect, ask questions, and learn from tech-savvy people. Discuss best practises in web development, testing, and DevOps with professionals from across the globe 🌎
+## Learning Resources by TestMu AI (Formerly LambdaTest)
 
-## What's New At LambdaTest ❓
+Learn modern testing through tutorials, guides, videos, and weekly updates:
 
-To stay updated with the latest features and product add-ons, visit [Changelog](https://changelog.lambdatest.com/) 
-      
-## About LambdaTest
+* [TestMu AI Blog](https://www.testmuai.com/blog/)
+* [TestMu AI Learning Hub](https://www.testmuai.com/learning-hub/)
+* [TestMu AI on YouTube](https://www.youtube.com/@TestMuAI)
+* [TestMu AI Newsletter](https://www.testmuai.com/newsletter/)
+  
+## LambdaTest is Now TestMu AI
 
-[LambdaTest](https://www.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=RSpec-Selenium-Sample) is a leading test execution and orchestration platform that is fast, reliable, scalable, and secure. It allows users to run both manual and automated testing of web and mobile apps across 3000+ different browsers, operating systems, and real device combinations. Using LambdaTest, businesses can ensure quicker developer feedback and hence achieve faster go to market. Over 500 enterprises and 1 Million + users across 130+ countries rely on LambdaTest for their testing needs.    
+On **January 12, 2026**, [LambdaTest evolved to TestMu AI](https://www.testmuai.com/lambdatest-is-now-testmuai/), the world's first fully autonomous **Agentic AI Quality Engineering Platform**.
 
-### Features
+Same team. Same infrastructure. Same customer accounts. All existing LambdaTest logins, scripts, capabilities, and integrations continue to work without change.
 
-* Run Selenium, Cypress, Puppeteer, Playwright, and Appium automation tests across 3000+ real desktop and mobile environments.
-* Real-time cross browser testing on 3000+ environments.
-* Test on Real device cloud
-* Blazing fast test automation with HyperExecute
-* Accelerate testing, shorten job times and get faster feedback on code changes with Test At Scale.
-* Smart Visual Regression Testing on cloud
-* 120+ third-party integrations with your favorite tool for CI/CD, Project Management, Codeless Automation, and more.
-* Automated Screenshot testing across multiple browsers in a single click.
-* Local testing of web and mobile apps.
-* Online Accessibility Testing across 3000+ desktop and mobile browsers, browser versions, and operating systems.
-* Geolocation testing of web and mobile apps across 53+ countries.
-* LT Browser - for responsive testing across 50+ pre-installed mobile, tablets, desktop, and laptop viewports
+ð Find the new home for [LambdaTest](https://www.testmuai.com).
 
-    
-[<img height="58" width="200" src="https://user-images.githubusercontent.com/70570645/171866795-52c11b49-0728-4229-b073-4b704209ddde.png">](https://accounts.lambdatest.com/register)
+### How LambdaTest Evolved into TestMu AI
 
+In 2017, we launched LambdaTest with a simple mission: make testing fast, reliable, and accessible. As LambdaTest grew, we expanded into Test Intelligence, Visual Regression Testing, Accessibility Testing, API Testing, and Performance Testing, covering the full depth of the testing lifecycle.
 
-## We are here to help you :headphones:
+As software development entered the AI era, testing had to evolve, too. We rebuilt the architecture to be AI-native from the ground up, with autonomous agents that **plan, author, execute, analyze, and optimize tests** while keeping humans in the loop. The platform integrates with your repos, CI, IDEs, and terminals, continuously learning from every code change and development signal.
 
-* Got a query? we are available 24x7 to help. [Contact Us](support@lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=RSpec-Selenium-Sample)
-* For more info, visit - [LambdaTest](https://www.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=RSpec-Selenium-Sample)
+That evolution earned a new name: **TestMu AI**, built for an AI-first future of quality engineering. TestMu is not a new name for us. It is the name of our annual community conference, which has brought together 100,000+ quality engineers to discuss how AI would reshape testing, long before that became an industry norm. 
+
+What started as a high-performance cloud testing platform has transformed into an AI-native, multi-agent system powering a connected, end-to-end quality layer. That evolution defined a new identity: LambdaTest evolved into TestMu AI, built for an AI-first future of quality engineering.
+
+## Support
+
+Got a question? Email [support@testmuai.com](mailto:support@testmuai.com) or chat with us 24x7 from our chat portal.
