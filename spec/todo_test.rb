@@ -4,7 +4,7 @@ describe "Sample ToDo List Functions" do
   it "Mark Done 2 items and add one in the TODO list" do
    itemName = 'Yey, Lets add it to list'
 
-   @driver.get("https://lambdatest.github.io/sample-todo-app/" )
+   @driver.get("https://www.testmuai.com/selenium-playground/todo-app/" )
 
    #Click on First Checkbox
      @driver.find_element(:name, 'li1').click
